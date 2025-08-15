@@ -1,0 +1,44 @@
+body {
+    background-size: cover;
+}
+
+.box {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+#title-box {
+    margin: 4px;
+}
+
+#current-score, #hi-score {
+    flex-grow: 0;
+}
+
+#big-box {
+    background-color: #dec;
+    border: 1px solid #aaa;
+    width: 80%;
+    heigth: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#game-box {
+    margin: 4;
+    background-color: #cdf;
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto min
+}
+
+#left-box, #right-box {
+    flex-grow: 1;
+}
+
+#middle-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 3 3 3;
+}
