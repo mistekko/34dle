@@ -1,2 +1,2 @@
-# 34dle
+* 34dle
 Guess the popularity of characters...!
