@@ -28,7 +28,7 @@ function nextMatch() {
     while ((idx[1] = Math.floor(Math.random() * 1000)) == idx[0]);
     match[1] = d[idx[1]];
     for (i in [0, 1]) {
-	img[i].src = match[i]["pic_url"];
+	img[i].src = `img/${match[i]["name"].replaceAll(" ","_").replaceAll("/", "+")}.jpg`;
 	img[i].alt = match[i]["name"];
 	pid[i].innerText = `ID: ${match[i]["pic_id"]}`;
     }
