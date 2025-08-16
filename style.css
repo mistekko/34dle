@@ -8,6 +8,20 @@ body {
     flex-direction: column;
 }
 
+.button {
+    background-color: #fdc;
+    border-radius: 20px;
+    line-height: 44px;
+    width: 120px;
+    font-size: 1em;
+}
+
+.img {
+    max-height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+
 #title-box {
     margin: 4px;
 }
