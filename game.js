@@ -47,8 +47,7 @@ function handleGuess(higherGuess) {
 	}
 	nextMatch();
     } else {
-    img[1].nextElementSibling.innerText =
-	`${match[1]["name"]}: ${match[1]["count"]} images`;
+	lbl[1].innerText = `${match[1]["name"]}: ${match[1]["count"]} images`;
 	endGame();
     }
 }
