@@ -40,8 +40,10 @@ function handleGuess(higherGuess) {
     if (higherGuess  == higherReality) {
 	streak += 1;
 	cscore.innerText = `Current score: ${streak}`;
-	if (streak > peak)
+	if (streak > peak) {
 	    peak = streak;
+	    hscore.innerText = `Hi-score: ${peak}`
+	}
 	nextMatch();
     } else {
     img[1].nextElementSibling.innerText =
@@ -64,7 +66,6 @@ async function startGame() {
 }
 
 function endGame() {
-    hscore.innerText = `Hi-score: ${peak}`
     btn[0].disabled = true;
     btn[1].disabled = true;
 }
