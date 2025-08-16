@@ -1,13 +1,16 @@
 let d;
 let streak, peak;
 
-let btn = [document.getElementById("top-button"),
-	   document.getElementById("bottom-button")];
 let cscore = document.getElementById("current-score");
 let hscore = document.getElementById("hi-score");
-let limg = document.getElementById("left-image");
-let rimg = document.getElementById("right-image");
-let img = [limg, rimg];
+let btn = [document.getElementById("top-button"),
+	   document.getElementById("bottom-button")];
+let img = [document.getElementById("left-image"),
+	   document.getElementById("right-image")];
+let lbl = [document.getElementById("limg-label"),
+	   document.getElementById("rimg-label")];
+let pid = [document.getElementById("limg-post-id"),
+	   document.getElementById("rimg-post-id")];
 
 let match = [undefined, undefined];
 let idx = [-1, -1];
@@ -27,12 +30,10 @@ function nextMatch() {
     for (i in [0, 1]) {
 	img[i].src = match[i]["pic_url"];
 	img[i].alt = match[i]["name"];
+	pid[i].innerText = `ID: ${match[i]["pic_id"]}`;
     }
-    img[0].nextElementSibling.innerText =
-	`${match[0]["name"]}: ${match[0]["count"]} image\npost ID: ${match[0]["pic_id"]}`;
-    img[1].nextElementSibling.innerText =
-	`${match[1]["name"]}: ???\npost ID: ${match[1]["pic_id"]}`;
-
+    lbl[0].innerText = `${match[0]["name"]}: ${match[0]["count"]} images`;
+    lbl[1].innerText = `${match[1]["name"]}: ???`;
 }
 
 function handleGuess(higherGuess) {
