@@ -10,10 +10,20 @@ body {
 
 .button {
     background-color: #fdc;
+    border: none;
+    margin: 4px;
     border-radius: 20px;
     line-height: 44px;
     width: 120px;
     font-size: 1em;
+}
+
+.button:hover {
+    background-color: #fed;
+}
+
+.button:active {
+    background-color: #eba;
 }
 
 .img {
